@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+</body>
+
+<script>
+    let p=new Promise((ok,ng)=>{
+
+        let aa=Math.ceil(Math.random()*1000);
+        console.log(aa);
+        if(aa%2==0){
+            ok();
+
+        }else{
+
+            ng();
+        }
+
+
+
+    });
+
+console.log('休憩');
+    p.then(()=>{console.log('ok');}).catch(()=>{console.log('ng')});
+
+
+
+
+    function sleep(waitMsec) {
+        var startMsec = new Date();
+
+        // 指定ミリ秒間だけループさせる（CPUは常にビジー状態）
+        while (new Date() - startMsec < waitMsec);
+    }
+
+    sleep(5000);
+
+
+    console.log('休憩2');
+
+</script>
+
+</html>
